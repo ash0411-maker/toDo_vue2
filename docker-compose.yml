@@ -14,6 +14,10 @@ services:
       context: .
     volumes:
       - .:/var/src/app
+      - bundle:/usr/local/bundle
+      - /app/vendor
+      - /app/log
+      - /app/.git
     ports:
       - "3000:3000"
     links:
@@ -47,4 +51,6 @@ services:
       - app
 volumes:
   mysql-data:
+    driver: local
+  bundle:
     driver: local
