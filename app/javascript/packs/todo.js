@@ -1,9 +1,9 @@
 import Vue from "vue/dist/vue.esm.js"
-import Vue from "./components/header"
+import Header from "./components/header"
 
 let app = new Vue({
   el: "#app",
   components: {
-    'navbar': Headers,
+    'navbar': Header,
   }
 })
